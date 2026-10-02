@@ -13,7 +13,10 @@ public class TipsParaParcial {
     static Scanner scanner = new Scanner(System.in);
 
     public static void main(String[] args) {
-        String[] placas = null;
+        String[] placas = null;/*
+        Declaramos el arreglo tipo null porque todavía
+        no sabemos que espacio va a ocupar
+        */
         double[] kilometros = null;
         double[] galones = null;
         boolean datosRegistrados = false;
@@ -57,9 +60,12 @@ public class TipsParaParcial {
                     break;
 
                 case 2:
-                    if (datosRegistrados) {
+                    if (datosRegistrados) {/*el if(datos registrados) está solo porque ya confirmamos en la 
+                        primera opción que es true, si es falso, el else 
+                        le dice que primero debe registrar los datos
+                        */
                         double rendimientoPromedio = calcularRendimientoPromedio(kilometros, galones);
-                        System.out.printf("El rendimiento promedio general de la flota es:  km/galón", rendimientoPromedio);
+                        System.out.printf("El rendimiento promedio general de la flota es:"+rendimientoPromedio+"km/galón");
                     } else {
                         System.out.println("Error: Primero debe registrar los datos de la flota (Opción 1).");
                     }
