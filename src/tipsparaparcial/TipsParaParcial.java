@@ -133,7 +133,8 @@ public class TipsParaParcial {
             totalGalones += galones[i];
         }
 
-        if (totalGalones == 0) {
+        if (totalGalones == 0) { 
+            //Está así porque no se puede dividir por 0
             return 0;
         }
         return totalKm / totalGalones; //Devuelve el promedio entre km y galones
